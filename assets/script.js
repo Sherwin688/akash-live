@@ -80,6 +80,8 @@ window.addEventListener("load", () => {
   const COMPONENT_SELECTOR = ".carousel__wrapper";
   const CONTROLS_SELECTOR = ".carousel__controls";
   const CONTENT_SELECTOR = ".carousel__content";
+  const ENABLE_DRAG_MAX_WIDTH = 1024;
+  const isLargeScreen = window.innerWidth > ENABLE_DRAG_MAX_WIDTH;
 
   const components = document.querySelectorAll(COMPONENT_SELECTOR);
 
@@ -171,13 +173,18 @@ window.addEventListener("load", () => {
       content.classList.remove("dragging");
     };
 
-    content.addEventListener("mousemove", mousemoveHandler);
-    content.addEventListener("mousedown", mousedownHandler);
+    if (!isLargeScreen) {
+      content.addEventListener("mousemove", mousemoveHandler);
+      content.addEventListener("mousedown", mousedownHandler);
+      content.addEventListener("mouseup", mouseupHandler);
+      content.addEventListener("mouseleave", mouseupHandler);
+    } else {
+      // Disable drag affordance on larger screens.
+      content.style.cursor = "default";
+    }
     if (component.querySelector(CONTROLS_SELECTOR) !== undefined) {
       content.addEventListener("scroll", scrollHandler);
     }
-    content.addEventListener("mouseup", mouseupHandler);
-    content.addEventListener("mouseleave", mouseupHandler);
   }
 });
 
