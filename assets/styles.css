@@ -466,6 +466,13 @@ section {
     margin-bottom: 1px;
 }
 
+/* Larger heading for Videos strip */
+#videos .carousel__headline {
+    font-size: clamp(40px, 3.2vw, 56px);
+    line-height: 1.05;
+}
+}
+
 .text-logo {
     position: relative;
     z-index: 7;
@@ -1205,11 +1212,11 @@ td {
     height: clamp(340px, 48vh, 500px);
 }
 
-/* Videos thumbnails: revert to original sizing */
+/* Videos thumbnails: slightly larger than original */
 #videos .carousel img,
 #videos .carousel__item__image {
-    width: 145px;
-    height: 140px;
+    width: 270px;
+    height: 265px;
 }
 
 #videos .carousel__content {

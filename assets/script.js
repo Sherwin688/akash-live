@@ -59,25 +59,37 @@ function unhover(element, path) {
   element.setAttribute("src", path);
 }
 
-// Hero poster progressive load: PNG first, swap to SVG once ready
+// Hero poster progressive load:
+// 1) Show PNG first; hide loader when PNG is ready
+// 2) Load SVG in the background and swap when ready (without showing loader again)
 document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("pageLoader");
   const heroPoster = document.getElementById("heroPoster");
   if (!loader || !heroPoster) return;
 
+  const hideLoader = () => {
+    if (!loader.classList.contains("is-hidden")) {
+      requestAnimationFrame(() => loader.classList.add("is-hidden"));
+    }
+  };
+
+  // Hide loader once the initial PNG has loaded (or immediately if already cached)
+  if (heroPoster.complete) {
+    hideLoader();
+  } else {
+    heroPoster.addEventListener("load", hideLoader, { once: true });
+    heroPoster.addEventListener("error", hideLoader, { once: true });
+  }
+
+  // Begin SVG preload in the background; swap source when ready
   const svgSrc = heroPoster.getAttribute("data-src-svg");
   if (!svgSrc) {
-    loader.classList.add("is-hidden");
     return;
   }
 
   const svgImg = new Image();
   svgImg.onload = () => {
     heroPoster.src = svgSrc;
-    requestAnimationFrame(() => loader.classList.add("is-hidden"));
-  };
-  svgImg.onerror = () => {
-    loader.classList.add("is-hidden");
   };
   svgImg.src = svgSrc;
 });
