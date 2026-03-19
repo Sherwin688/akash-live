@@ -26,88 +26,6 @@ body {
     background-color: var(--bg-dark);
 }
 
-.page-loader {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:
-        radial-gradient(60% 50% at 50% 45%, rgba(168, 255, 0, 0.10) 0%, rgba(0, 0, 0, 0) 60%),
-        rgba(0, 0, 0, 0.88);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    transition: opacity 450ms ease, visibility 450ms ease;
-}
-
-.page-loader.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.page-loader__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    color: rgba(255, 255, 255, 0.85);
-    font-family: 'Big Shoulders Display', sans-serif;
-    letter-spacing: 1px;
-}
-
-.page-loader__logo {
-    width: min(260px, 70vw);
-    height: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.65));
-    animation: loaderLogoFloat 1600ms ease-in-out infinite;
-}
-
-.page-loader__eq {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 6px;
-    height: 28px;
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-.page-loader__eq span {
-    width: 4px;
-    height: 6px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.92);
-    transform-origin: bottom;
-    animation: eqBounce 2200ms cubic-bezier(0.45, 0, 0.55, 1) infinite;
-    opacity: 0.9;
-}
-
-.page-loader__eq span:nth-child(1) { animation-delay: 0ms; }
-.page-loader__eq span:nth-child(2) { animation-delay: 120ms; }
-.page-loader__eq span:nth-child(3) { animation-delay: 240ms; }
-.page-loader__eq span:nth-child(4) { animation-delay: 360ms; }
-.page-loader__eq span:nth-child(5) { animation-delay: 480ms; }
-
-.page-loader__text {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.78);
-}
-
-@keyframes eqBounce {
-    0%, 100% { transform: scaleY(0.75); opacity: 0.55; }
-    50% { transform: scaleY(1.85); opacity: 1; }
-}
-
-@keyframes loaderLogoFloat {
-    0%, 100% { transform: translateY(0); opacity: 0.95; }
-    50% { transform: translateY(-6px); opacity: 1; }
-}
-
 nav {
     background-color: rgba(0, 0, 0, 0.58);
     backdrop-filter: blur(8px);
@@ -463,6 +381,8 @@ section {
     color: #fff !important;
     font-weight: 200;
     font-family: 'Big Shoulders Display', sans-serif;
+    font-size: clamp(52px, 4.2vw, 55px);
+    line-height: 1.05;
     margin-bottom: 1px;
 }
 
@@ -1026,6 +946,7 @@ opacity: 0;
 }
 
 .carousel .carousel__header {
+    padding: 20px;
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
