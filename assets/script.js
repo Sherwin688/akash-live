@@ -60,20 +60,10 @@ function unhover(element, path) {
 }
 
 // Hero poster progressive load:
-// 1) Show PNG + loader for ~1 second
-// 2) Hide loader after the delay (no image readiness checks)
-// 3) Load SVG in the background and swap when ready
+// Show PNG first, then swap to SVG once it's loaded in background.
 document.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById("pageLoader");
   const heroPoster = document.getElementById("heroPoster");
-  if (!loader || !heroPoster) return;
-
-  // Always keep loader visible for at least 1 second, then hide it
-  setTimeout(() => {
-    if (!loader.classList.contains("is-hidden")) {
-      loader.classList.add("is-hidden");
-    }
-  }, 1000);
+  if (!heroPoster) return;
 
   // Begin SVG preload in the background; swap source when ready
   const svgSrc = heroPoster.getAttribute("data-src-svg");
