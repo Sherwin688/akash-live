@@ -15,13 +15,22 @@
 
 <body>
 
+    <div class="page-loader" id="pageLoader" role="status" aria-live="polite" aria-label="Loading">
+        <div class="page-loader__inner">
+            <img class="page-loader__logo" src="./assets/images/akash_live_logo.png" alt="Akash Live">
+            <div class="page-loader__spinner" aria-hidden="true"></div>
+            <div class="page-loader__text">Loading…</div>
+        </div>
+    </div>
+
     <section class="hero-poster-section">
         <nav style="padding-top: 0;">
             <a href="#about">ABOUT</a>
             <a href="#videos">VIDEOS</a>
             <a href="#contact">CONTACT</a>
         </nav>
-        <img class="hero-poster-image" src="./assets/images/Akash - Live Percussionist.svg"
+        <img class="hero-poster-image" id="heroPoster" src="./assets/images/Akash - Live Percussionist.png"
+            data-src-svg="./assets/images/Akash - Live Percussionist.svg"
             alt="Akash Live Percussionist poster">
     </section>
     <section class="crowd-bg" id="about" style="min-height: 100vh;">

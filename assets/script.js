@@ -59,6 +59,29 @@ function unhover(element, path) {
   element.setAttribute("src", path);
 }
 
+// Hero poster progressive load: PNG first, swap to SVG once ready
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("pageLoader");
+  const heroPoster = document.getElementById("heroPoster");
+  if (!loader || !heroPoster) return;
+
+  const svgSrc = heroPoster.getAttribute("data-src-svg");
+  if (!svgSrc) {
+    loader.classList.add("is-hidden");
+    return;
+  }
+
+  const svgImg = new Image();
+  svgImg.onload = () => {
+    heroPoster.src = svgSrc;
+    requestAnimationFrame(() => loader.classList.add("is-hidden"));
+  };
+  svgImg.onerror = () => {
+    loader.classList.add("is-hidden");
+  };
+  svgImg.src = svgSrc;
+});
+
 window.addEventListener("load", () => {
   const COMPONENT_SELECTOR = ".carousel__wrapper";
   const CONTROLS_SELECTOR = ".carousel__controls";
