@@ -18,7 +18,9 @@
     <div class="page-loader" id="pageLoader" role="status" aria-live="polite" aria-label="Loading">
         <div class="page-loader__inner">
             <img class="page-loader__logo" src="./assets/images/akash_live_logo.png" alt="Akash Live">
-            <div class="page-loader__spinner" aria-hidden="true"></div>
+            <div class="page-loader__eq" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <div class="page-loader__text">Loading…</div>
         </div>
     </div>
@@ -33,7 +35,7 @@
             data-src-svg="./assets/images/Akash - Live Percussionist.svg"
             alt="Akash Live Percussionist poster">
     </section>
-    <section class="crowd-bg" id="about" style="min-height: 100vh;">
+    <!-- <section class="crowd-bg" id="about" style="min-height: 100vh;">
         <div class="crowd-bg-overlay"></div>
         <div class="LR-container">
             <div class="left">
@@ -68,153 +70,22 @@
                     height="50px" src="./assets/images/akash_live_logo.png" alt="akash live goa logo">
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="videos" style="flex-direction: column;width: 100%;margin: 0;padding-left: 10%;padding-right: 10%;">
         <div class="video-text-container">
         </div>
         <div class="container" style="display: flex;justify-content: center;align-items: center;">
             <div class="video-group vg1" style="flex-basis: 30%;">
-                <video class="videos" src="./videos/V6 trop.mov" poster="./assets/images/Akash.webp" id="mainVideo"
-                    controls></video>
+                <video class="videos" src="./videos/V3.mov" poster="./assets/images/techno2.png" id="mainVideo"
+                    controls autoplay playsinline></video>
             </div>
             <div class="video-group" style="width: auto;flex-basis: 60%;height: auto;">
                 <div class="carousel-container">
                     <div class="carousel " style="padding-top: 0;padding-bottom: 0;">
                         <div class="carousel__wrapper">
                             <div class="carousel__header">
-                                <h2 class="carousel__headline target_animation c1">LED & Liquid Drumming Set
-                                </h2>
-                                <div class="carousel__controls">
-                                    <button class="carousel__arrow disabled arrow-prev"></button>
-                                    <button class="carousel__arrow arrow-next"></button>
-                                </div>
-                            </div>
-                            <a href="#videos">
-                                <ul class="carousel__content">
-                                    <li class="carousel__item" style="width: fit-content;">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ll8.png"
-                                                    alt="akash live peformance bollywood 2"
-                                                    onclick='setMainVideo("./videos/liquidAndLed/ll8.mov","./assets/images/ll8.png")' />
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                    <li class="carousel__item" style="width: fit-content;">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ll9.png"
-                                                    alt="akash live peformance bollywood 2"
-                                                    onclick='setMainVideo("./videos/liquidAndLed/ll9.mov","./assets/images/ll9.png")' />
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                    <li class="carousel__item" style="width: fit-content;">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ll1.png"
-                                                    alt="akash live peformance bollywood 2"
-                                                    onclick='setMainVideo("./videos/liquidAndLed/ll1.mov","./assets/images/ll1.png")' />
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                    <li class="carousel__item" style="width: fit-content;">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ll4.png"
-                                                    alt="akash live peformance bollywood 2"
-                                                    onclick='setMainVideo("./videos/liquidAndLed/ll4.mov","./assets/images/ll4.png")' />
-                                            </div>
-                                        </div>
-
-                                    </li>
-
-                                    <li class="carousel__item" style="width: fit-content;">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ll3.png"
-                                                    alt="akash live peformance bollywood 2"
-                                                    onclick='setMainVideo("./videos/liquidAndLed/ll3.mov","./assets/images/ll3.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item" style="width: fit-content;">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ll2.png"
-                                                    alt="akash live peformance bollywood 2"
-                                                    onclick='setMainVideo("./videos/liquidAndLed/ll2.mov","./assets/images/ll2.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item" style="width: fit-content;">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ll5.png"
-                                                    alt="akash live peformance bollywood 5"
-                                                    onclick='setMainVideo("./videos/liquidAndLed/ll5.mp4","./assets/images/ll5.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item" style="width: fit-content;">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ll6.png"
-                                                    alt="akash live peformance bollywood 5"
-                                                    onclick='setMainVideo("./videos/liquidAndLed/ll6.mp4","./assets/images/ll6.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item" style="width: fit-content;">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ll7.png"
-                                                    alt="akash live peformance bollywood 5"
-                                                    onclick='setMainVideo("./videos/liquidAndLed/ll7.mp4","./assets/images/ll7.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel " style="padding-top: 0;padding-bottom: 0;">
-                        <div class="carousel__wrapper">
-                            <div class="carousel__header">
-                                <h2 class="carousel__headline target_animation c1">Bollywood Set
-                                </h2>
+                                <h2 class="carousel__headline target_animation c1">Videos</h2>
                                 <div class="carousel__controls">
                                     <button class="carousel__arrow disabled arrow-prev"></button>
                                     <button class="carousel__arrow arrow-next"></button>
@@ -226,19 +97,7 @@
                                         <div class="a-div">
                                             <div class="vignette">
                                                 <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/bv13.png"
-                                                    alt="akash harmalkar bollywood performance"
-                                                    onclick='setMainVideo("./videos/bollywood/bv13.mov","./assets/images/bv13.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
+                                                    <img src="./assets/images/play-btn.png" alt="play btn" style="width: 20px;height: 20px;">
                                                 </div>
                                                 <img class="carousel__item__image" src="./assets/images/techno2.png"
                                                     alt="akash live peformance techno"
@@ -250,19 +109,18 @@
                                         <div class="a-div">
                                             <div class="vignette">
                                                 <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
+                                                    <img src="./assets/images/play-btn.png" alt="play btn" style="width: 20px;height: 20px;">
                                                 </div>
-                                                <img class="carousel__item__image" src="./assets/images/tropical3.png"
-                                                    alt="akash live peformance tropical"
-                                                    onclick='setMainVideo("./videos/V6 trop.mov","./assets/images/tropical3.png")' />
-                                            </div>
+                                                <img class="carousel__item__image" src="./assets/images/first_image.png"
+                                                    alt="akash harmalkar bollywood performance"
+                                                    onclick='setMainVideo("./videos/first_video.mp4","./assets/images/first_image.png")' />
                                         </div>
                                     </li>
                                     <li class="carousel__item">
                                         <div class="a-div">
                                             <div class="vignette">
                                                 <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
+                                                    <img src="./assets/images/play-btn.png" alt="play btn" style="width: 20px;height: 20px;">
                                                 </div>
                                                 <img class="carousel__item__image" src="./assets/images/tropical2.png"
                                                     alt="akash live peformance tropical 4"
@@ -274,11 +132,23 @@
                                         <div class="a-div">
                                             <div class="vignette">
                                                 <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play butotn">
+                                                    <img src="./assets/images/play-btn.png" alt="play btn" style="width: 20px;height: 20px;">
                                                 </div>
-                                                <img class="carousel__item__image" src="./assets/images/bv11.png"
+                                                <img class="carousel__item__image" src="./assets/images/fourth_video.png"
+                                                    alt="akash live peformance tropical 4"
+                                                    onclick='setMainVideo("./videos/fourth_video.MOV","./assets/images/fourth_video.png")' />
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="carousel__item">
+                                        <div class="a-div">
+                                            <div class="vignette">
+                                                <div class="play-btn">
+                                                    <img src="./assets/images/play-btn.png" alt="play button" style="width: 20px;height: 20px;">
+                                                </div>
+                                                <img class="carousel__item__image" src="./assets/images/fifth_image.png"
                                                     alt="akash performance image"
-                                                    onclick='setMainVideo("./videos/bollywood/bv11.mov","./assets/images/bv11.png")' />
+                                                    onclick='setMainVideo("./videos/bollywood/fifth_video.MOV","./assets/images/fifth_image.png")' />
                                             </div>
                                         </div>
                                     </li>
@@ -286,120 +156,11 @@
                                         <div class="a-div">
                                             <div class="vignette">
                                                 <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
+                                                    <img src="./assets/images/play-btn.png" alt="play btn" style="width: 20px;height: 20px;">
                                                 </div>
-                                                <img class="carousel__item__image" src="./assets/images/bv12.png"
+                                                <img class="carousel__item__image" src="./assets/images/sixth-image.png"
                                                     alt="akash live goa performance"
-                                                    onclick='setMainVideo("./videos/bollywood/bv12.mov","./assets/images/bv12.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/techno1.png"
-                                                    alt="akash live performance in goa"
-                                                    onclick='setMainVideo("./videos/v1.mov","./assets/images/techno1.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/bv1.png"
-                                                    alt="akash live performance in goa"
-                                                    onclick='setMainVideo("./videos/bollywood/bv2.mov",src="./assets/images/bv1.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/bv3.png"
-                                                    alt="akash harmalkar bollywood performance"
-                                                    onclick='setMainVideo("./videos/bollywood/bv3.mov","./assets/images/bv3.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/bv4.png"
-                                                    alt="akash live peformance bollywood"
-                                                    onclick='setMainVideo("./videos/bollywood/bv4.mov","./assets/images/bv4.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/bv5.png"
-                                                    alt="akash live peformance bollywood 2"
-                                                    onclick='setMainVideo("./videos/bollywood/bv5.mov","./assets/images/bv5.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/techno3.png"
-                                                    alt="akash live peformance bollywood 3"
-                                                    onclick='setMainVideo("./videos/V2.mov","./assets/images/techno3.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/tropical1.jpg"
-                                                    alt="akash live peformance tropical"
-                                                    onclick='setMainVideo("./videos/V5 trop.mov","./assets/images/tropical1.jpg")' />
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/bv9.png"
-                                                    alt="akash live peformance tropical 2"
-                                                    onclick='setMainVideo("./videos/bollywood/bv9.mov","./assets/images/bv9.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/bv10.png"
-                                                    alt="akash live peformance bollywood 4"
-                                                    onclick='setMainVideo("./videos/bollywood/bv10.mov","./assets/images/bv10.png")' />
+                                                    onclick='setMainVideo("./videos/bollywood/sixth_video.MOV","./assets/images/sixth-image.png")' />
                                             </div>
                                         </div>
                                     </li>
@@ -408,122 +169,6 @@
 
                         </div>
                     </div>
-                    <div class="carousel " style="margin-left: 10px;">
-                        <div class="carousel__wrapper">
-                            <div class="carousel__header">
-                                <h2 class="carousel__headline c2 target_animation">Commerical / Techno / Tropical Set
-                                </h2>
-                                <div class="carousel__controls">
-                                    <button class="carousel__arrow disabled arrow-prev"></button>
-                                    <button class="carousel__arrow arrow-next"></button>
-                                </div>
-                            </div>
-                            <a href="#videos">
-                                <ul class="carousel__content">
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ov8.png"
-                                                    alt="akash live peformance other 4"
-                                                    onclick='setMainVideo("./videos/other/ov8.mp4","./assets/images/ov8.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ov4.png"
-                                                    alt="akash live peformance other 4"
-                                                    onclick='setMainVideo("./videos/other/ov3.mov","./assets/images/ov4.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ov6.png"
-                                                    alt="akash live peformance other 6"
-                                                    onclick='setMainVideo("./videos/other/ov5.mov","./assets/images/ov6.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ov5.png"
-                                                    alt="akash live peformance other 5"
-                                                    onclick='setMainVideo("./videos/other/ov4.mov","./assets/images/ov5.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ov7.png"
-                                                    alt="akash live peformance other 7"
-                                                    onclick='setMainVideo("./videos/other/ov6.mov","./assets/images/ov7.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ov1.png"
-                                                    alt="akash live peformance other"
-                                                    onclick='setMainVideo("./videos/other/ov1.mp4","./assets/images/ov1.png")' />
-                                            </div>
-                                        </div>
-                                    </li> -->
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ov2.png"
-                                                    alt="akash live peformance other 3"
-                                                    onclick='setMainVideo("./videos/other/ov2.mov","./assets/images/ov2.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-
-
-                                    <li class="carousel__item">
-                                        <div class="a-div">
-                                            <div class="vignette">
-                                                <div class="play-btn">
-                                                    <img src="./assets/images/play-btn.png" alt="play btn">
-                                                </div>
-                                                <img class="carousel__item__image" src="./assets/images/ov8new.png"
-                                                    alt="akash live peformance other 8"
-                                                    onclick='setMainVideo("./videos/other/ov7.mov","./assets/images/ov8new.png")' />
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </a>
-
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
